@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".MainActivity">
+
+	<android.support.v7.widget.RecyclerView
+			android:id="@+id/recyclerView"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_margin="@dimen/margin_small"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			tools:listitem="@layout/item_message_me"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintBottom_toTopOf="@id/edtInput"/>
+
+	<EditText
+			android:layout_margin="@dimen/margin_small"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toLeftOf="@id/btnSend"
+			app:layout_constraintTop_toBottomOf="@id/recyclerView"
+			app:layout_constraintBottom_toBottomOf="parent"
+			android:id="@+id/edtInput"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:inputType="text"
+			android:hint="@string/type_a_message"
+			android:autofillHints="@string/type_a_message"/>
+
+	<Button
+			android:text="@string/send"
+			app:layout_constraintTop_toBottomOf="@id/recyclerView"
+			app:layout_constraintBottom_toBottomOf="parent"
+			android:layout_width="wrap_content"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintLeft_toRightOf="@id/edtInput"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnSend"/>
+</android.support.constraint.ConstraintLayout>
